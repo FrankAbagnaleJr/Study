@@ -51,4 +51,16 @@ public class WareInServiceImpl extends ServiceImpl<WareInMapper, WareIn> impleme
         return wareIn;
     }
 
+    @Override
+    public List<WareIn> getAll() {
+        List<WareIn> list = baseMapper.getAll();
+        return list;
+    }
+
+    @Override
+    public List<WareInVo> getInList() {
+        List<WareInVo> list =  baseMapper.getInList();
+        return list;
+    }
+
 }

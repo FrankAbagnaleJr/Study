@@ -31,4 +31,7 @@ public interface WareInMapper extends BaseMapper<WareIn> {
      */
     WareIn getOneById(@Param("id") Long id);
 
+    List<WareIn> getAll();
+
+    List<WareInVo> getInList();
 }

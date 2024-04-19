@@ -2,6 +2,7 @@ package com.frank.demo3;
 
 import com.frank.demo3.entity.WareIn;
 import com.frank.demo3.service.WareInService;
+import com.frank.demo3.vo.WareInVo;
 import lombok.AllArgsConstructor;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,6 +51,18 @@ public class Demo3 {
         if (Objects.isNull(ware)) {
             return "查询失败";
         }
+        return ware.toString();
+    }
+
+    @GetMapping("/all")
+    public String getall(){
+        List<WareIn> list = wareInService.getAll();
+        return list.toString();
+    }
+
+    @GetMapping("/getInList")
+    public String getInList(){
+        List<WareInVo> ware = wareInService.getInList();
         return ware.toString();
     }
 }

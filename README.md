@@ -13,3 +13,4 @@ Demo 类是测试类
     this.sava()    wareInDetailService.save()
     不会失效
     在事务方法内，添加并且还能返回添加的新数据
+    查询结果封装在实体类中的集合中
