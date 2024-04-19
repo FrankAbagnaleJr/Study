@@ -2,6 +2,7 @@ package com.frank.demo3.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.frank.demo3.entity.WareIn;
+import com.frank.demo3.entity.WareInDetail;
 import com.frank.demo3.vo.WareInVo;
 
 import java.util.List;
@@ -22,4 +23,6 @@ public interface WareInService extends IService<WareIn> {
     List<WareIn> getAll();
 
     List<WareInVo> getInList();
+
+    List<WareInDetail> testchain();
 }

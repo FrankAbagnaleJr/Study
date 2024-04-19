@@ -1,5 +1,6 @@
 package com.frank.demo3.service.impl;
 
+import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.demo3.entity.WareIn;
 import com.frank.demo3.entity.WareInDetail;
@@ -60,6 +61,12 @@ public class WareInServiceImpl extends ServiceImpl<WareInMapper, WareIn> impleme
     @Override
     public List<WareInVo> getInList() {
         List<WareInVo> list =  baseMapper.getInList();
+        return list;
+    }
+
+    @Override
+    public List<WareInDetail> testchain() {
+        List<WareInDetail> list = wareInDetailService.lambdaQuery().eq(WareInDetail::getProdId, 1254854425).list();
         return list;
     }
 

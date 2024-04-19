@@ -1,6 +1,7 @@
 package com.frank.demo3;
 
 import com.frank.demo3.entity.WareIn;
+import com.frank.demo3.entity.WareInDetail;
 import com.frank.demo3.service.WareInService;
 import com.frank.demo3.vo.WareInVo;
 import lombok.AllArgsConstructor;
@@ -63,6 +64,12 @@ public class Demo3 {
     @GetMapping("/getInList")
     public String getInList(){
         List<WareInVo> ware = wareInService.getInList();
+        return ware.toString();
+    }
+
+    @GetMapping("/testchain")
+    public String testchain(){
+        List<WareInDetail> ware = wareInService.testchain();
         return ware.toString();
     }
 }
