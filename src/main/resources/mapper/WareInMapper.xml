@@ -9,4 +9,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.frank.demo3.mapper.WareInMapper">
 
+    <select id="getOneById" resultType="com.frank.demo3.entity.WareIn">
+        select * from uic_ware_in where id = #{id}
+    </select>
 </mapper>

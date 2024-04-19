@@ -12,3 +12,4 @@ Demo 类是测试类
 # demo3：测试事务直接里面，this调用会不会导致事务失效
     this.sava()    wareInDetailService.save()
     不会失效
+    在事务方法内，添加并且还能返回添加的新数据

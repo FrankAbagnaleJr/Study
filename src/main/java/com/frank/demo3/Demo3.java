@@ -3,11 +3,14 @@ package com.frank.demo3;
 import com.frank.demo3.entity.WareIn;
 import com.frank.demo3.service.WareInService;
 import lombok.AllArgsConstructor;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * @Auther: uicsoft-frank
@@ -33,10 +36,20 @@ public class Demo3 {
         wareIn.setWareInTime(LocalDateTime.now());
         wareIn.setWareInStatus(0);
         wareIn.setWareInType(0);
-        boolean savew = wareInService.savew(wareIn);
-        if (savew) {
-            return "添加成功";
+        WareIn ware = wareInService.savew(wareIn);
+        if (Objects.isNull(ware)) {
+            return "添加失败";
         }
-        return "添加失败";
+        return ware.toString();
+    }
+
+    @GetMapping("/get")
+    public String get() {
+        List<WareIn> list = wareInService.list();
+        WareIn ware = wareInService.getOneById(list.get(0).getId());
+        if (Objects.isNull(ware)) {
+            return "查询失败";
+        }
+        return ware.toString();
     }
 }

@@ -12,6 +12,5 @@ import com.frank.demo3.entity.WareInDetail;
  * @description TODO
  */
 public interface WareInDetailService extends IService<WareInDetail> {
-    boolean savewd(WareInDetail wareInDetail);
 
 }

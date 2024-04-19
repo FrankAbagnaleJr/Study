@@ -8,7 +8,11 @@ package com.frank.demo3.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo3.entity.WareIn;
+import com.frank.demo3.vo.WareInVo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * 接口权限
@@ -17,5 +21,14 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface WareInMapper extends BaseMapper<WareIn> {
+
+
+//    List<WareIn> selectAll(@Param("id") Long id);
+    /**
+     * 根据id查询所有出库信息
+     * @param id
+     * @return
+     */
+    WareIn getOneById(@Param("id") Long id);
 
 }
