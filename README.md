@@ -31,3 +31,7 @@ Demo 类是测试类
 
     final Integer[] userType = {null};
     userType[0] = 1;  //是可以的
+
+# demo8：MP模糊查找
+    likeLeft(column, value)    column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '%欢'
+    likeRight(column, value)  column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '欢%'
