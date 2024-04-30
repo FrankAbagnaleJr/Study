@@ -26,6 +26,8 @@ Demo 类是测试类
     数组里有几个参数,第一个参数是空，第二个是0001
 
 # demo7：final修饰的第二次赋值会报错吗
+    使用 final 关键字修饰的变量意味着该变量的引用不可变，即不能再次指向其他对象。
+    但是，对于数组类型的 final 变量，数组本身是不可变的，但数组中的元素是可以修改的。
+
     final Integer[] userType = {null};
-    userType将不能赋值
-    final Integer[] userType = {0,1,2,3};
+    userType[0] = 1;  //是可以的
