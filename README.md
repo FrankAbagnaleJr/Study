@@ -24,3 +24,8 @@ Demo 类是测试类
 
 # demo6：“HK0001”.split("KH")
     数组里有几个参数,第一个参数是空，第二个是0001
+
+# demo7：final修饰的第二次赋值会报错吗
+    final Integer[] userType = {null};
+    userType将不能赋值
+    final Integer[] userType = {0,1,2,3};
