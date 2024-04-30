@@ -18,3 +18,6 @@ Demo 类是测试类
 
 # demo4：stream流去重
     会判断对象中的list，会判断对象中的变量，可放心使用
+
+# demo5：hutool的NumberUtil.div除法
+    除数为0会报异常 / by zero
