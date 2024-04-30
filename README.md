@@ -21,3 +21,6 @@ Demo 类是测试类
 
 # demo5：hutool的NumberUtil.div除法
     除数为0会报异常 / by zero
+
+# demo6：“HK0001”.split("KH")
+    数组里有几个参数,第一个参数是空，第二个是0001
