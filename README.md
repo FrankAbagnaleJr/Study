@@ -35,3 +35,12 @@ Demo 类是测试类
 # demo8：MP模糊查找
     likeLeft(column, value)    column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '%欢'
     likeRight(column, value)  column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '欢%'
+
+# demo9：合并流
+    Stream.concat(intStream, longStream)
+    不同类型的流不建议合并
+
+    
+    Stream<Object> concat = Stream.concat(stream, stream1);
+    Stream<Dog> concat1 = Stream.concat(stream, stream2);
+    发生了流嵌套，或报错
