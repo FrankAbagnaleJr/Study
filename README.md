@@ -35,3 +35,6 @@ Demo 类是测试类
 # demo8：MP模糊查找
     likeLeft(column, value)    column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '%欢'
     likeRight(column, value)  column字段,value是模糊查找的值，例如：name,"欢"，查找就是like '欢%'
+
+# demo9：流执行完不收集，会改变原来的集合吗
+    会
