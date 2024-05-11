@@ -10,6 +10,6 @@ import lombok.Data;
  * @description TODO
  */
 @Data
-public class Dog {
+public class Cat {
     private String name;
 }
