@@ -44,3 +44,10 @@ Demo 类是测试类
     Stream<Object> concat = Stream.concat(stream, stream1);
     Stream<Dog> concat1 = Stream.concat(stream, stream2);
     发生了流嵌套，或报错
+
+# demo10：流执行完不收集，会改变原来的集合吗
+    会
+
+# demo11：测试循环1万次需要多久
+    0.03秒，循环调数据库会挂
+    
